@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace WeatherForecastProxyService.Controllers
 {
@@ -9,12 +8,10 @@ namespace WeatherForecastProxyService.Controllers
     [Route("[controller]")]
     public class WeatherForecastProxyController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastProxyController> _logger;
         private readonly IWeatherForecastClient _weatherForecastClient;
 
-        public WeatherForecastProxyController(ILogger<WeatherForecastProxyController> logger, IWeatherForecastClient weatherForecastClient)
+        public WeatherForecastProxyController(IWeatherForecastClient weatherForecastClient)
         {
-            _logger = logger;
             _weatherForecastClient = weatherForecastClient;
         }
 
