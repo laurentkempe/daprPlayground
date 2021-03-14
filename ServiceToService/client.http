@@ -1,0 +1,2 @@
+﻿GET http://localhost:3500/v1.0/invoke/proxy/method/weatherforecastproxy?count=2
+Accept: application/json
