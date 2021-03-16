@@ -2,7 +2,7 @@
 
 This sample demonstrates how to use Dapr SDK in a Service to Service call.
 
-You can read more about it on the blog post "Service to service invocation with Dapr .NET SDK".
+You can read more about it on the blog post "[Service to service invocation with Dapr .NET SDK](https://laurentkempe.com/2021/03/16/service-to-service-invocation-with-dapr-dotnet-sdk/)".
 
 # Try
 
