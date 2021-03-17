@@ -1,4 +1,4 @@
-﻿# Service to Service with Dapr SDK
+﻿# Service to Service with Refit and Dapr SDK
 
 This sample demonstrates how to use [Refit](https://reactiveui.github.io/refit/) with Dapr SDK in a Service to Service call.
 
