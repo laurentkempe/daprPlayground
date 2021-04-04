@@ -14,7 +14,8 @@ var consumerSecret = twitterSecrets["twitterSecrets:consumerSecret"].Values.Firs
 var accessToken = twitterSecrets["twitterSecrets:accessToken"].Values.First();
 var accessSecret = twitterSecrets["twitterSecrets:accessSecret"].Values.First();
 
-var twitterClient = new TwitterClient(consumerKey, consumerSecret, accessToken, accessSecret);
+var twitterClient =
+    new TwitterClient(consumerKey, consumerSecret, accessToken, accessSecret);
 
 var user = await twitterClient.Users.GetAuthenticatedUserAsync();
 Console.WriteLine(user.Description);
