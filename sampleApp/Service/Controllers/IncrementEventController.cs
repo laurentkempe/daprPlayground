@@ -20,7 +20,7 @@ namespace Service.Controllers
         [HttpPost("increment")]
         public void CounterIncremented([FromBody]int counter)
         {
-            _logger.LogInformation($"Counter new value: {counter}");
+            _logger.LogInformation($"Counter new value received using CounterIncremented event: {counter}");
         }
     }
 }
