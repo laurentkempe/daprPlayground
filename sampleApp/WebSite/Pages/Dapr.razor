@@ -20,10 +20,10 @@
 
     private int currentCount;
 
-    private void IncrementCount()
+    private async Task IncrementCount()
     {
         currentCount++;
 
-        _daprClient.SaveStateAsync(CounterStore, "count", currentCount);
+        await _daprClient.SaveStateAsync(CounterStore, "count", currentCount);
     }
 }
