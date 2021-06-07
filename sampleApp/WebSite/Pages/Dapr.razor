@@ -26,6 +26,6 @@
 
         await _daprClient.SaveStateAsync(CounterStore, "count", currentCount);
         
-        await _daprClient.PublishEventAsync("pubsub", "increment", currentCount);
+        await _daprClient.PublishEventAsync("pubsub", "CounterIncremented", currentCount);
     }
 }
