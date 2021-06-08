@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Dapr;
+﻿using Dapr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
