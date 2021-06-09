@@ -1,0 +1,60 @@
+﻿@page "/fetchdatadapr"
+
+@using WebSite.Data
+@inject DaprClient _daprClient
+
+<h1>Dapr Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+<button @onclick="@OnClick">Refresh</button>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<WeatherForecast> forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetWeatherForecast();
+    }
+
+    private async Task OnClick(MouseEventArgs e)
+    {
+        await GetWeatherForecast();
+    }
+
+    private async Task GetWeatherForecast()
+    {
+        forecasts = 
+            await _daprClient.InvokeMethodAsync<IEnumerable<WeatherForecast>>(HttpMethod.Get, "weatherservice", "weatherforecast");
+    }
+
+}
