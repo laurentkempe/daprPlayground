@@ -1,11 +1,13 @@
 # Sample App
 
-This sample app demonstrates how to use Dapr SDK for State, Pub/Sub and Service to Service call.
+This sample app demonstrates how to use [.NET Dapr SDK](https://github.com/dapr/dotnet-sdk) for State, Pub/Sub and Service to Service call.
+It leverage [Dapr SideKick](https://github.com/man-group/dapr-sidekick-dotnet) to be able to start easily the Dapr sidecar from your application or services.
 
-It was created for DevApps meetup "Saison 04 Episode 07" (in French).
+It was created for DevApps meetup "Saison 04 Episode 07" (in French), [watch it on YouTube](https://youtu.be/XtASb2tmo5c?t=119).
 
 WebSite, a Blazor server application, uses Dapr State to retrieve/store a counter state and Dapr Pub/Sub to publish an event.
-Service, a ASP.NET 5 WebApi, uses Dapr Pub/Sub to subscribe to the event and log it.
+CounterService, a ASP.NET 5 WebApi, uses Dapr Pub/Sub to subscribe to the event and log it.
+WeatherService, the default template for ASP.NET 5 WebApi, just use Dapr SideKick to start it with Dapr.
 
 # Try
 
@@ -15,4 +17,4 @@ Service, a ASP.NET 5 WebApi, uses Dapr Pub/Sub to subscribe to the event and log
 
 ## Start Sample App
 
-You can start WebSite and Service `.\start.ps1` (it needs Windows Terminal), which will also start the Dapr sidecars.
+You can start WebSite and CounterService `.\start.ps1` (it needs Windows Terminal), which will also start the Dapr sidecars.
