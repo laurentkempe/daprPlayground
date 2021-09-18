@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubGraphQLService", "GitHubGraphQLService\GitHubGraphQLService.csproj", "{05A09562-E889-4B00-9A80-8BC786A36C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubGraphQLBlazorClient", "GitHubGraphQLBlazorClient\GitHubGraphQLBlazorClient.csproj", "{97EA9EBB-4CA0-4623-B50C-650D1836A165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubGraphQLConsoleClient", "GitHubGraphQLConsoleClient\GitHubGraphQLConsoleClient.csproj", "{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,17 +32,17 @@ Global
 		{05A09562-E889-4B00-9A80-8BC786A36C12}.Release|x64.Build.0 = Release|Any CPU
 		{05A09562-E889-4B00-9A80-8BC786A36C12}.Release|x86.ActiveCfg = Release|Any CPU
 		{05A09562-E889-4B00-9A80-8BC786A36C12}.Release|x86.Build.0 = Release|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Debug|x64.Build.0 = Debug|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Debug|x86.Build.0 = Debug|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Release|x64.ActiveCfg = Release|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Release|x64.Build.0 = Release|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Release|x86.ActiveCfg = Release|Any CPU
-		{97EA9EBB-4CA0-4623-B50C-650D1836A165}.Release|x86.Build.0 = Release|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Debug|x64.Build.0 = Debug|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Debug|x86.Build.0 = Debug|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Release|x64.ActiveCfg = Release|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Release|x64.Build.0 = Release|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Release|x86.ActiveCfg = Release|Any CPU
+		{158BBC06-C6B7-4A83-A76E-2F95CABC6F1C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
