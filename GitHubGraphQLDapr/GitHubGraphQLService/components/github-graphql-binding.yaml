@@ -1,0 +1,19 @@
+﻿apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: github-graphql-binding
+  namespace: default
+spec:
+  type: bindings.graphql
+  version: v1
+  metadata:
+    - name: endpoint
+      value:  https://api.github.com/graphql
+    - name: header:Cache-Control
+      value: no-cache
+    - name: header:Authorization
+      secretKeyRef:
+        name: GitHubPersonalAccessToken
+        key:  GitHubPersonalAccessToken
+auth:
+  secretStore: local-secret-store
