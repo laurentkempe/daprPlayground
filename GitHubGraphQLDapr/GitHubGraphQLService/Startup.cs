@@ -26,10 +26,11 @@ namespace GitHubGraphQLService
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GitHubGraphQLService", Version = "v1" });
             });
             
-            // Add Dapr Sidekick - https://github.com/man-group/dapr-sidekick-dotnet
+            // Dapr - Add Dapr Sidekick - https://github.com/man-group/dapr-sidekick-dotnet
+            // Dapr - Configuration define the location of the Dapr components folder in appsettings.json
             services.AddDaprSidekick(Configuration);
             
-            // Add Dapr .NET SDK Client - https://github.com/dapr/dotnet-sdk
+            // Dapr - Add Dapr .NET SDK Client - https://github.com/dapr/dotnet-sdk
             services.AddSingleton(new DaprClientBuilder().Build());
         }
 
@@ -43,12 +44,8 @@ namespace GitHubGraphQLService
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GitHubGraphQLService v1"));
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
-            app.UseAuthorization();
-            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

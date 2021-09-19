@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Dapr.Client;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -10,11 +11,10 @@ namespace GitHubGraphQLService.Controllers
     [Route("[controller]")]
     public class GitHubController : ControllerBase
     {
-        private const string GithubGraphQLBinding = "github-graphql-binding";
-        private const string GraphQLOperation = "query";
         private readonly ILogger<GitHubController> _logger;
         private readonly DaprClient _daprClient;
 
+        // Dapr - Inject DaprClient from .NET SDK Client using IoC 
         public GitHubController(ILogger<GitHubController> logger, DaprClient daprClient)
         {
             _logger = logger;
@@ -24,7 +24,7 @@ namespace GitHubGraphQLService.Controllers
         [HttpGet]
         public async Task<Viewer> GetUser()
         {
-            var metadata = new Dictionary<string, string>()
+            var metadata = new Dictionary<string, string>
             {
                 {
                     "query", @"query { 
@@ -36,9 +36,10 @@ namespace GitHubGraphQLService.Controllers
                 }
             };
 
-            var root = await _daprClient.InvokeBindingAsync<dynamic, Root>(GithubGraphQLBinding, GraphQLOperation, null, metadata);
+            // Dapr - Use Dapr .NET SDK Client to invoke the GraphQ binding component of the Dapr Binding building block 
+            var root = await _daprClient.InvokeBindingAsync<Empty, Root>("github-graphql-binding", "query", new Empty(), metadata);
 
-            _logger.LogInformation($"User: {root.Viewer.Name} - {root.Viewer.AvatarUrl}");
+            _logger.LogInformation("User: {Name} - {AvatarUrl}", root.Viewer.Name, root.Viewer.AvatarUrl);
             
             return root.Viewer;
         }

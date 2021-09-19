@@ -12,8 +12,10 @@ spec:
     - name: header:Cache-Control
       value: no-cache
     - name: header:Authorization
+      # Dapr - Use Secrets management building block      
       secretKeyRef:
         name: GitHubPersonalAccessToken
         key:  GitHubPersonalAccessToken
+# Dapr - Use Secrets management building block      
 auth:
   secretStore: local-secret-store

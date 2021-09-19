@@ -36,6 +36,7 @@ namespace GitHubGraphQLConsoleClient
                 }
             };
             
+            // Dapr - Use Dapr .NET SDK Client to invoke the GraphQ binding component of the Dapr Binding building block 
             var root =
                 await daprClient.InvokeBindingAsync<Empty, Root>("github-graphql-binding", "query", new Empty(), metadata);
 
@@ -46,6 +47,7 @@ namespace GitHubGraphQLConsoleClient
         {
             Console.WriteLine("Using Dapr Service Invocation!");
 
+            // Dapr - Use Dapr .NET SDK Client to invoke the Service invocation building block 
             var viewer = await daprClient.InvokeMethodAsync<Viewer>(HttpMethod.Get, "githubgraphqlservice", "GitHub");
 
             Console.WriteLine($"User: {viewer.Name} - {viewer.AvatarUrl}");
