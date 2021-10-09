@@ -25,7 +25,7 @@ namespace Worker.Controllers
 
             var response = await _daprClient.InvokeBindingAsync<string, TimeData>("httpJob", "get", "");
 
-            _logger.LogInformation($"Received: {response.utc_datetime}");
+            _logger.LogInformation($"⏰ in Paris {response.utc_datetime}");
         }
     }
 }
