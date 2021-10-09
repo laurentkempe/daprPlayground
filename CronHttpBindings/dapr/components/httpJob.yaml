@@ -1,0 +1,11 @@
+﻿apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: httpJob
+  namespace: default
+spec:
+  type: bindings.http
+  version: v1
+  metadata:
+    - name: url
+      value: http://worldtimeapi.org/api/timezone/Europe/Paris
