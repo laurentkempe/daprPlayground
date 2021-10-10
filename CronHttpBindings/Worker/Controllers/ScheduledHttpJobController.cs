@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Text.Json;
+using System.Threading.Tasks;
 using Dapr.Client;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -23,9 +24,10 @@ namespace Worker.Controllers
         {
             _logger.LogInformation($"{nameof(ScheduledHttpJobController)} called 😎");
 
-            var response = await _daprClient.InvokeBindingAsync<string, TimeData>("httpJob", "get", "");
+            var response = await _daprClient.InvokeBindingAsync(new BindingRequest("httpJob", "get"));
+            var timeData = JsonSerializer.Deserialize<TimeData>(response.Data.Span);
 
-            _logger.LogInformation($"⏰ in Paris {response.utc_datetime}");
+            _logger.LogInformation($"⏰ in Paris {timeData?.utc_datetime}");
         }
     }
 }
