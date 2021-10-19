@@ -2,7 +2,7 @@
 
 This sample demonstrates how to configure Dapr Cron and HTTP bindings to call an API in scheduled way.
 
-You can read more about it on the blog post "Dapr binding building block by simple example".
+You can read more about it on the blog post "[Dapr binding building block by simple example](https://laurentkempe.com/2021/10/19/dapr-binding-building-block-by-simple-example/)".
 
 # Try
 
