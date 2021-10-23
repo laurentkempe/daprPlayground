@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicOnionClient", "MagicOnionClient\MagicOnionClient.csproj", "{7C819E03-EEE4-471F-87BC-2C9F23B4BBB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicOnionServer", "MagicOnionServer\MagicOnionServer.csproj", "{9434FAB3-7A27-4C27-87CB-8513E0CE5A39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicOnionShared", "MagicOnionShared\MagicOnionShared.csproj", "{4ACA3749-7170-4F0E-A7FD-B934DF7398DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C819E03-EEE4-471F-87BC-2C9F23B4BBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C819E03-EEE4-471F-87BC-2C9F23B4BBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C819E03-EEE4-471F-87BC-2C9F23B4BBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C819E03-EEE4-471F-87BC-2C9F23B4BBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9434FAB3-7A27-4C27-87CB-8513E0CE5A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9434FAB3-7A27-4C27-87CB-8513E0CE5A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9434FAB3-7A27-4C27-87CB-8513E0CE5A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9434FAB3-7A27-4C27-87CB-8513E0CE5A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ACA3749-7170-4F0E-A7FD-B934DF7398DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ACA3749-7170-4F0E-A7FD-B934DF7398DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ACA3749-7170-4F0E-A7FD-B934DF7398DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ACA3749-7170-4F0E-A7FD-B934DF7398DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
