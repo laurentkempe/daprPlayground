@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos/dapr/proto/components/v1/common.proto" ProtoRoot="./Protos/" />
+    <Protobuf Include="Protos/state.proto" ProtoRoot="./Protos/" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.9" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.45.0" />
   </ItemGroup>
 
