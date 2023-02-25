@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5190"
+    },
+    "Dapr": {
+      "commandName": "Executable",
+      "executablePath": "dapr.exe",
+      "commandLineArgs": "run --app-id dapr-service --resources-path ../dapr/components/ --app-port 5190 -- dotnet run --project .",
+      "workingDirectory": "$(ProjectDir)",
+      "remoteDebugEnabled": true,
+      "use64Bit": true,
+      "nativeDebugging": true
+    }
+  }
+}
