@@ -1,0 +1,9 @@
+﻿version: 1
+common:
+  resourcesPath: ./components/
+apps:
+  - appDirPath: ./
+    appID: conversation
+    daprHTTPPort: 3500
+    daprGRPCPort: 50001
+    command: ["dotnet", "run"]

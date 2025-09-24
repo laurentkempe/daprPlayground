@@ -1,0 +1,17 @@
+﻿apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: azure-openai
+spec:
+  type: conversation.openai
+  metadata:
+    - name: key
+      value: "eb147b4e1e714356b5b38f8cd4244409"
+    - name: model
+      value: "Phi-4-mini-instruct"
+    - name: endpoint
+      value: "https://laurentkempe-ai-aiservices1814811667.services.ai.azure.com"
+    - name: apiType
+      value: "azure"
+    - name: apiVersion
+      value: "2025-01-01-preview"
